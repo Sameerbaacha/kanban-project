@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kanban Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="board-container">
+    <div class="board">
+      <div class="column" ondrop="drop(event, 'todo')" ondragover="allowDrop(event)">
+        <h2>To Do</h2>
+        <div id="todo" class="tasks"></div>
+      </div>
+      <div class="column" ondrop="drop(event, 'inprogress')" ondragover="allowDrop(event)">
+        <h2>In Progress</h2>
+        <div id="inprogress" class="tasks"></div>
+      </div>
+      <div class="column" ondrop="drop(event, 'done')" ondragover="allowDrop(event)">
+        <h2>Done</h2>
+        <div id="done" class="tasks"></div>
+      </div>
+    </div>
+  </div>
+  <div class="add-task-container">
+    <button class="add-task-btn" onclick="addTask()">Add Task</button>
+  </div>
+  <script src="myscript.js"></script>
+</body>
+</html>
